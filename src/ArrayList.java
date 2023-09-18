@@ -1,8 +1,8 @@
 import java.util.Arrays;
 
 public class ArrayList<DataType> {
+
     private Object[] data = new Object[0];
-    
     public ArrayList()
     {
 
@@ -21,6 +21,36 @@ public class ArrayList<DataType> {
     public void set(int i, DataType n)
     {
         this.data[i] = n;
+    }
+
+    public void remove(int i)
+    {
+        data[i] = null;
+        Object[] tempData = new Object[data.length - 1];
+        for(int j = 0; j < tempData.length; j++)
+        {
+            if(i + 1 == data.length)
+            {
+                tempData[j] = data[j];
+            }
+            else
+            {
+                if(j < i)
+                {
+                    tempData[j] = data[j];
+                }
+                else
+                {
+                    tempData[j] = data[j+1];
+                }
+            }
+        }
+        data = tempData;
+    }
+
+    public void clear()
+    {
+        this.data = new Object[0];
     }
 
     public String toString()
