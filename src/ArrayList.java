@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class ArrayList<DataType> {
+public class ArrayList<E> {
 
     private Object[] data = new Object[0];
     public ArrayList()
@@ -8,7 +8,12 @@ public class ArrayList<DataType> {
 
     }
 
-    public void add(DataType n)
+    public ArrayList(int n)
+    {
+        this.data = new Object[n];
+    }
+
+    public void add(E n)
     {
         this.data = Arrays.copyOf(data, data.length + 1);
         this.data[data.length - 1] = n;
@@ -18,14 +23,13 @@ public class ArrayList<DataType> {
         return data[i];
     }
 
-    public void set(int i, DataType n)
+    public void set(int i, E n)
     {
         this.data[i] = n;
     }
 
     public void remove(int i)
     {
-        data[i] = null;
         Object[] tempData = new Object[data.length - 1];
         for(int j = 0; j < tempData.length; j++)
         {
@@ -51,6 +55,20 @@ public class ArrayList<DataType> {
     public void clear()
     {
         this.data = new Object[0];
+    }
+
+    public Boolean contains(E o)
+    {
+        for(Object n : this.data)
+        {
+            if(n.equals(o)) return true;
+        }
+        return false;
+    }
+
+    public int size()
+    {
+        return this.data.length;
     }
 
     public String toString()
