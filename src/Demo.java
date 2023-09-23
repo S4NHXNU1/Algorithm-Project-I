@@ -30,10 +30,31 @@ public class Demo {
         // System.out.println(Str.contains("DEFG"));
 
         LinkedList ID = new LinkedList();
-        ID.add(1);
-        ID.add(2);
-        ID.add(3);
+        ID.add(new CartItem(0, 0));
+        ID.add(new CartItem(1, 10));
+        ID.add(new CartItem(2, 20));
+        ID.add(new CartItem(3, 30));
+        ID.add(new CartItem(4, 40));
 
         System.out.println(ID);
+        System.out.println(ID.size());
+
+        System.out.println(ID.remove(5));
+        System.out.println(ID);
+        // ID.remove();
+        // System.out.println(ID);
+        // System.out.println(ID.size());
+        // ID.remove();
+        // System.out.println(ID);
+        // System.out.println(ID.size());
+        // ID.remove();
+        // System.out.println(ID);
+        // System.out.println(ID.size());
+        // ID.remove();
+        // System.out.println(ID);
+        // System.out.println(ID.size());
+        // ID.remove();
+        // System.out.println(ID);
+        // System.out.println(ID.size());
     }
 }

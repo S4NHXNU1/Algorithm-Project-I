@@ -1,16 +1,16 @@
 public class Node {
     
-    private int ID;
+    CartItem ITEM;
     Node next;
 
-    public Node(int ID)
+    public Node(CartItem ITEM)
     {
-        this.ID = ID;
+        this.ITEM = ITEM;
         this.next = null;
     }
 
     public String toString()
     {
-        return ""+ID ;
+        return ""+ITEM ;
     }
 }
