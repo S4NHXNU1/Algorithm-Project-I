@@ -1,36 +1,36 @@
 import java.util.Arrays;
 
-public class ArrayList<E> {
+public class ArrayList{
 
-    private Object[] data = new Object[0];
+    private ProductItem[] data;
     public ArrayList()
     {
-
+        this(0);
     }
 
     public ArrayList(int n)
     {
-        this.data = new Object[n];
+        this.data = new ProductItem[n];
     }
 
-    public void add(E n)
+    public void add(ProductItem n)
     {
         this.data = Arrays.copyOf(data, data.length + 1);
         this.data[data.length - 1] = n;
     }
 
-    public Object get(int i){
+    public ProductItem get(int i){
         return data[i];
     }
 
-    public void set(int i, E n)
+    public void set(int i, ProductItem n)
     {
         this.data[i] = n;
     }
 
     public void remove(int i)
     {
-        Object[] tempData = new Object[data.length - 1];
+        ProductItem[] tempData = new ProductItem[data.length - 1];
         for(int j = 0; j < tempData.length; j++)
         {
             if(i + 1 == data.length)
@@ -54,12 +54,12 @@ public class ArrayList<E> {
 
     public void clear()
     {
-        this.data = new Object[0];
+        this.data = new ProductItem[0];
     }
 
-    public Boolean contains(E o)
+    public Boolean contains(ProductItem o)
     {
-        for(Object n : this.data)
+        for(ProductItem n : this.data)
         {
             if(n.equals(o)) return true;
         }
@@ -73,16 +73,15 @@ public class ArrayList<E> {
 
     public String toString()
     {
-        String str = "[";
+        if(this.size() == 0) return "none";
+        String str = "";
         for(int i = 0; i < data.length; i++)
         {
             if(i + 1 != data.length)
-                str += data[i] + ",";
+                str += data[i] + "\n";
             else
                 str += data[i];
         }
-        str += "]";
-
         return str;
     }
 }

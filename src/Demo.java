@@ -56,5 +56,7 @@ public class Demo {
         // ID.remove();
         // System.out.println(ID);
         // System.out.println(ID.size());
+
+        System.out.println(new ProductItem("Item1", "Description",100.50, 20));
     }
 }
