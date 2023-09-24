@@ -8,8 +8,13 @@ public class CartItem {
         this.QTY = QTY;
     }
 
+    public void setQTY(int qty)
+    {
+        this.QTY = qty;
+    }
+
     public String toString()
     {
-        return productID + " " + QTY;
+        return productID + " : " + QTY;
     }
 }

@@ -80,21 +80,47 @@ public class LinkedList {
         return c;
     }
 
+    public CartItem get(int i)
+    {
+        if(i < this.size() && i >= 0 && this.head != null)
+        {
+            if (i == 0) return this.head.ITEM;
+
+            Node tempNode = this.head;
+            int c = 0;
+            while(tempNode != null)
+            {
+                if(c == i)
+                {
+                    return tempNode.ITEM;
+                }
+                tempNode = tempNode.next;
+                c++;
+            }
+        }
+        return null;
+    }
+
+    public void clear()
+    {
+        this.head = null;
+    }
+
     public String toString()
     {
-        if(this.head == null) return "[]";
+        if(this.head == null) return "none";
 
-        String str = "[" + this.head;
+        String str = "" + this.head;
         Node tempNode = this.head;
         int c = 0;
         while(tempNode.next != null)
         {
-            if(c != 0) str += "," + tempNode;
+            if(c != 0) str += "\n" + tempNode;
             tempNode = tempNode.next;
-            if(tempNode.next == null) str += "," + tempNode;
+            if(tempNode.next == null) str += "\n" + tempNode;
             c++;
         }
 
-        return str + "]";
+        return str;
     }
 }
