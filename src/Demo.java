@@ -39,8 +39,8 @@ public class Demo {
         System.out.println(ID);
         System.out.println(ID.size());
 
-        System.out.println(ID.remove(5));
-        System.out.println(ID);
+        //System.out.println(ID.remove(5));
+        //System.out.println(ID);
         // ID.remove();
         // System.out.println(ID);
         // System.out.println(ID.size());
@@ -56,15 +56,15 @@ public class Demo {
         // ID.remove();
         // System.out.println(ID);
         // System.out.println(ID.size());
-        System.out.println("\n\n" + ID.get(3));
+        //System.out.println("\n\n" + ID.get(3));
         //System.out.println(new ProductItem("Item1", "Description",100.50, 20));
 
-        System.out.println("\n\n================ Invoice ================");
-        System.out.println("               MUICT Co.Ltd.");
-        System.out.println("       999 Phutthamonthon Sai 4 Rd.");
-        System.out.println(" Salaya Subdistric Phutthamonthon Distric");
-        System.out.println("       Nakhornpathom Province 73170");
-        System.out.println("==========================================");
-        System.out.println("   ID | Name | Description | QTY | Price");
+        // System.out.println("\n\n================ Invoice ================");
+        // System.out.println("               MUICT Co.Ltd.");
+        // System.out.println("       999 Phutthamonthon Sai 4 Rd.");
+        // System.out.println(" Salaya Subdistric Phutthamonthon Distric");
+        // System.out.println("       Nakhornpathom Province 73170");
+        // System.out.println("==========================================");
+        // System.out.println("   ID | Name | Description | QTY | Price");
     }
 }
